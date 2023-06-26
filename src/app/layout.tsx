@@ -1,6 +1,7 @@
 import React from "react";
-import Providers from "@/utils/provider";
+import ReactQuery from "@/utils/ReactQuery";
 import "./globals.css";
+import Recoil from "@/utils/Recoil";
 
 export default function RootLayout({
   children,
@@ -8,9 +9,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="ko-KR">
       <body>
-        <Providers>{children}</Providers>
+        <Recoil>
+          <ReactQuery>{children}</ReactQuery>
+        </Recoil>
       </body>
     </html>
   );
